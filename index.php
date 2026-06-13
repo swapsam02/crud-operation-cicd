@@ -2,7 +2,7 @@
 require_once 'config.php';
 
 // Fetch all users
-$sql = "SELECT * FROM users ORDER BY created_at DESC";
+$sql =  FROM users ORDER BY created_at DESC";
 $stmt = $pdo->query($sql);
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -42,7 +42,7 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php foreach($users as $user): ?>
             <tr>
                 <td><?php echo $user['id']; ?></td>
-                <td><?php echo htmlspecialchars($user['name ?></td>
+                <td><?php echo htmlspecialchars($user['name']); ?></td>
                 <td><?php echo htmlspecialchars($user['email']); ?></td>
                 <td><?php echo htmlspecialchars($user['phone']); ?></td>
                 <td><?php echo $user['created_at']; ?></td>
