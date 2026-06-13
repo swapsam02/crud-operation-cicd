@@ -1,8 +1,10 @@
 <?php
+
+echo ;
 require_once 'config.php';
 
 // Fetch all users
-$sql =  FROM users ORDER BY created_at DESC";
+$sql = "SELECT * FROM users ORDER BY created_at DESC";
 $stmt = $pdo->query($sql);
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
