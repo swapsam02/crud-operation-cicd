@@ -1,6 +1,4 @@
 <?php
-
-echo ;
 require_once 'config.php';
 
 // Fetch all users
