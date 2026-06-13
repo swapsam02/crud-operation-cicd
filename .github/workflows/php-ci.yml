@@ -19,10 +19,16 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.0'
-
+      
       - name: Display PHP Version
         run: php -v
+
+      - name: Install Dependencies
+        run: composer install
 
       - name: Validate PHP Files
         run: |
           find . -name "*.php" -exec php -l {} \;
+
+      - name: Run PHPUnit Tests
+        run: php vendor/phpunit/phpunit/phpunit tests
