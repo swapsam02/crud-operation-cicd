@@ -32,3 +32,6 @@ jobs:
 
       - name: Run PHPUnit Tests
         run: php vendor/phpunit/phpunit/phpunit tests
+
+      - name: Build Docker Image
+        run: docker build -t crud-app .

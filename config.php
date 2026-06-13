@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost';
+$host = 'host.docker.internal';
 $dbname = 'crud_db';
 $username = 'root';
 $password = '';
