@@ -41,7 +41,7 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <tbody>
             <?php foreach($users as $key =>  $user): ?>
             <tr>
-                <td><?php echo $key++; ?></td>
+                <td><?php echo ++$key; ?></td>
                 <td><?php echo htmlspecialchars($user['name']); ?></td>
                 <td><?php echo htmlspecialchars($user['email']); ?></td>
                 <td><?php echo htmlspecialchars($user['phone']); ?></td>
