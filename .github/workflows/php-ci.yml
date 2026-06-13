@@ -1,0 +1,28 @@
+name: PHP CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  php-validation:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+
+      - name: Display PHP Version
+        run: php -v
+
+      - name: Validate PHP Files
+        run: |
+          find . -name "*.php" -exec php -l {} \;
