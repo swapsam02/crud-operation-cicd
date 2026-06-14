@@ -49,6 +49,9 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td>
                     <a href="edit.php?id=<?php echo $user['id']; ?>" class="btn btn-edit">Edit</a>
                     <a href="delete.php?id=<?php echo $user['id']; ?>" class="btn btn-delete" onclick="return confirm('Are you sure?')">Delete</a>
+                    <a href="ai-summary.php?id=<?php echo $user['id']; ?>">
+                        AI Summary
+                    </a>
                 </td>
             </tr>
             <?php endforeach; ?>
